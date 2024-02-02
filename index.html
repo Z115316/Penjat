@@ -13,8 +13,8 @@ and open the template in the editor.
             var vides = 7;
             function comprovar() {
                 alert("comprovar()");
-                if ((document.getElememtById("valor").value >= "a") && 
-                    (document.getElememtById("valor").value <= "1")) 
+                if ((document.getElementById("valor").value >= "a") && 
+                    (document.getElementById("valor").value <= "l")) 
                 {
                     document.getElementById("lletres").innerHTML = 
                             document.getElementById("valor").value;
@@ -23,7 +23,7 @@ and open the template in the editor.
                 else 
                 {
                     alert("has fallat");
-                    vides = vides - 1:
+                    vides = vides - 1;
                     document.getElementById("vides").innerHTML 
                     = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
                 }
@@ -43,7 +43,7 @@ and open the template in the editor.
 
 
 
-                <h2>--------</h2>
+                <h2 id="lletres">--------</h2>
 
 
                 <h2>Vides</h2>
