@@ -11,24 +11,84 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             var vides = 7;
-            function comprovar() {
+
+           
+             function comprovar() {
                 alert("comprovar()");
-                if ((document.getElementById("valor").value >= "a") && 
-                    (document.getElementById("valor").value <= "l")) 
-                {
-                    document.getElementById("lletres").innerHTML = 
-                            document.getElementById("valor").value;
-                    alert("Has encertat!");
-                } 
-                else 
-                {
-                    alert("has fallat");
-                    vides = vides - 1;
-                    document.getElementById("vides").innerHTML 
-                    = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
-                }
+                
+                   lletra = lletra.toLowerCase();
+            
+            switch(lletra) {
+                case "à":
+                case "á":
+                    lletra = "a";
+                    break;
+                case "í":
+                case "ì":
+                    lletra = "i";
+                    break;
+                case "ò":
+                case "ó":
+                    lletra = "o";
+                    break;
+                case "ú":
+                case "ù":    
+                    lletra = "u";
+                    break;
+                case "é":
+                case "è":
+                    lletra = "e";
+                    break
+                    
+                }    
+            /*
+             * L'abecedari català + castellà es composa
+             * de les vint-i-vuit lletres següents:
+             * a, b, c, ç, d, e, f, g, h, i, j, k, l, m, (Has enecertat!)
+             * n, o, p, q, r, s, t, u, v, w, x, y, z. (Has fallat!)
+             */
+          
+          if (((lletra>="a") && (lletra <= "m") (lletra == "ç")) {
+                  window.alert)("Has encertat");
+                  
+               //Afegim lletra a Paraula actualitzam la pantalla.
+               Paraula = Paraula + lletra + " ";
+               document.getElementById("paraula").innerHTML = Paraula;
+           }else {    
+            window.alert("Has fallat!");
+            
+            LLetres = Lletres +lletra + " ";
+            document.getElementById("Lletres").innerHTML = LLetres;
+            
+            
+            Vides = Vides -1;
+            
+    } else {
+            
+                document.getElementById("Vides").innerHTML = 
+            "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+}
+    if (Vides <= 0)  {
+        
+        window.alert("i has perdut");
+        AturaTot():
             }
-        </script>
+    else{ 
+        if(Paraula.length >= 14) {
+            window.alert("i has guanyat!");
+            AturaTot();
+            
+        }
+        
+    }
+}
+
+    function AturaTot() {
+        document.getElementById("lletra").disabled = true;
+        document.getElementById("comprovar").disabled = false;
+        
+    }
+</script>
 
     </head>
     <body>
