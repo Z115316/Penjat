@@ -38,6 +38,7 @@
                 if (((lletra >= "a") && (lletra <= "m")) || (lletra == "ç" ))
                 {
                     alert("Has encertat!");
+                    document.getElementById("miau").play();
                     correcte = correcte + 1;
                     correctes = correctes + " " + lletra;
                     document.getElementById("correctes").innerHTML =  correctes;
@@ -46,9 +47,11 @@
                 else if (((lletra >= "n") && (lletra <= "z")) || (lletra == "ñ" ))
                 {
                     alert("Has fallat!");
+                     document.getElementById("boom_cloud").play();
                     vides = vides -1;
                         if (vides == 0){
                             alert("has fallat tots els intents");
+                            document.getElementById("cat-fight").play();
                             AturaTot();
                         }
                         document.getElementById("vida").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
@@ -117,6 +120,12 @@
     break;
             }
          } 
+         var seconds = 0;
+            function timer(){
+            seconds = seconds + 1;
+            document.getElementById("counter").innerHTML = seconds;
+                  }
+            setInterval(timer, 1000);
 
 
 
