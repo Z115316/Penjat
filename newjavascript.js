@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+
             var vides = 7;
             var correcte = 0;
             var correctes = "";
             var dolentes = "";
+
 
             function comprovar() {
             var lletra = document.getElementById("valor").value;
@@ -38,7 +42,7 @@
                 if (((lletra >= "a") && (lletra <= "m")) || (lletra == "ç" ))
                 {
                     alert("Has encertat!");
-                    document.getElementById("miau").play();
+                    document.getElementById("cheer").play();
                     correcte = correcte + 1;
                     correctes = correctes + " " + lletra;
                     document.getElementById("correctes").innerHTML =  correctes;
@@ -126,6 +130,8 @@
             document.getElementById("counter").innerHTML = seconds;
                   }
             setInterval(timer, 1000);
+            
+            
 
 
 

@@ -35,7 +35,7 @@
 
             function comprovar() {
                     alert(paraula);
-                    alert(Paraula);            
+         
             
             var lletra = document.getElementById("valor").value;
                 document.getElementById("valor").value = "";
@@ -76,7 +76,6 @@
                        
                      }
                     }
-                    alert(Paraula);
                                      
                     document.getElementById("cheer").play();
                     correcte = correcte + 1;

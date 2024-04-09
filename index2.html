@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prototip</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var vides = 7;
+            var correcte = 0;
+            var correctes = "";
+            var dolentes = "";
+
+            function comprovar() {
+            var lletra = document.getElementById("valor").value;
+                document.getElementById("valor").value = "";
+                lletra = lletra.toLowerCase();  
+         
+            switch (lletra) {
+                case "á":
+                case "à":
+                    lletra = "a";
+                    break;
+                case "é":
+                case "è":
+                    lletra = "e";
+                    break;
+                case "í":
+                case "ï":
+                    lletra = "i";
+                    break;
+                case "ó":
+                case "ò":
+                    lletra = "o";
+                    break;
+                case "ú":
+                case "ü":
+                    lletra = "u";
+                    break;   
+            }    
+                if (((lletra >= "a") && (lletra <= "m")) || (lletra == "ç" ))
+                {
+                    alert("Has encertat!");
+                    correcte = correcte + 1;
+                    correctes = correctes + " " + lletra;
+                    document.getElementById("correctes").innerHTML =  correctes;
+                } 
+                
+                else if (((lletra >= "n") && (lletra <= "z")) || (lletra == "ñ" ))
+                {
+                    alert("Has fallat!");
+                    vides = vides -1;
+                        if (vides == 0){
+                            alert("has fallat tots els intents");
+                            AturaTot();
+                        }
+                        document.getElementById("vida").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+                        dolentes = dolentes + " " + lletra;
+                        document.getElementById("incorrectes").innerHTML =  dolentes; 
+                }
+                
+                else {
+                    alert("caràcter incorrecte");
+                }
+            }
+          
+            function AturaTot() {
+                document.getElementById("valor").disabled = true;
+                document.getElementById("boto").disabled = true;
+            }
+            
+            
+            
+            function MostraImg() {
+        switch (vides)  {
+            case :
+                document.getelementById("ahorcado_6").hidden = false;
+                break;
+              case 6:
+                document.getelementById("ahorcado_5").hidden = false;
+                  document.getelementById("ahorcado_6").hidden = true;
+                break;
+             case 5:
+                document.getelementById("ahorcado_4").hidden = false;
+                  document.getelementById("ahorcado_5").hidden = true;
+                   break;
+               case 4:
+                document.getelementById("ahorcado_4").hidden = false;
+                  document.getelementById("ahorcado_5").hidden = true; 
+                     case 3:
+                document.getelementById("ahorcado_3").hidden = false;
+                  document.getelementById("ahorcado_4").hidden = true; 
+                  break;
+             case 2:
+                document.getelementById("ahorcado_2").hidden = false;
+                  document.getelementById("ahorcado_3").hidden = true; 
+                         break;
+            case 1:
+                document.getelementById("ahorcado_1").hidden = false;
+                  document.getelementById("ahorcado_2").hidden = true; 
+                break;
+            case 0:
+                document.getelementById("ahorcado_0").hidden = false;
+                  document.getelementById("ahorcado_1").hidden = true;
+                     break;
+                  default:  
+                     break;      
+                     
+        }
+    }
+        </script>
+    </head>
+    
+    <body>
+        <h1>Prototip Joc del Penjat</h1>
+        <input type="text" placeholder="Escriu una lletra en minúscula" id="valor" maxlength="1">
+        <button onclick="comprovar();" id="boto">Comprovar</button>
+        
+        <h2>Paraula</h2>
+        <p id="correctes"></p>
+        
+        <h2>Vides</h2>
+        <p id="vida">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7</p>
+        
+        <h2>Lletres</h2>
+        <p id="incorrectes"></p>
+        
+       
+                
+                
+                
+                
+         <img src="img/ahorcado_0.png" id="ahorcado_0" style="width:280px;heigh:270px;"/
+             onclick = 'document.getElementById("ahorcado_0").hidden = true;
+                 document.getElementById("ahorcado_6").hidden = false;'/>
+        
+        <img src="img/ahorcado_1.png" id="ahorcado_1" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_1").hidden = true;
+                 document.getElementById("ahorcado_0").hidden = false;'/>
+        
+        <img src="img/ahorcado_2.png" id="ahorcado_2" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_2").hidden = true;
+                 document.getElementById("ahorcado_1").hidden = false;'/>
+        
+        <img src="img/ahorcado_3.png" id="ahorcado_3" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_3").hidden = true;
+                 document.getElementById("ahorcado_2").hidden = false;'/>
+        
+        <img src="img/ahorcado_4.png" id="ahorcado_4" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_4").hidden = true;
+                 document.getElementById("ahorcado_3").hidden = false;'/>
+        
+        <img src="img/ahorcado_5.png" id="ahorcado_5" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_5").hidden = true;
+                 document.getElementById("ahorcado_4").hidden = false;'/>
+        
+        <img src="img/ahorcado_6.png" id="ahorcado_6" style="width:280px;heigh:270px;"
+         onclick = 'document.getElementById("ahorcado_6").hidden = true;
+                 document.getElementById("ahorcado_5").hidden = false;'/>
+                
+    </body sty>
+    
+    
+</html>
