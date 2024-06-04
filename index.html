@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var vides = 7;
+            function comprovar() {
+                alert("comprovar()");
+                if ((document.getElememtById("valor").value >= "a") && 
+                    (document.getElememtById("valor").value <= "1")) 
+                {
+                    document.getElementById("lletres").innerHTML = 
+                            document.getElementById("valor").value;
+                    alert("Has encertat!");
+                } 
+                else 
+                {
+                    alert("has fallat");
+                    vides = vides - 1:
+                    document.getElementById("vides").innerHTML 
+                    = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1><div>Prototip Joc del Penjat</div>
+            <body style="background-color:#CCAEBC">
+
+                <input type="text" placeholder="Escriu en minuscules" id="valor">  
+                <button onclick="comprovar()">COMPROVAR</button>
+
+
+                <h2>Paraula</h2>
+
+
+
+                <h2>--------</h2>
+
+
+                <h2>Vides</h2>
+
+                <p id="vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
+             
+                <h2>Lletres</h2>
+
+                <h2>--------</h2>
+
+            </body>
+
+</html>
+
