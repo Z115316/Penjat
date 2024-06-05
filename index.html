@@ -1,4 +1,4 @@
-TYPE html>
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
         <html>
             <head>
-                
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="basededades.js"></script>
@@ -14,30 +13,32 @@ and open the template in the editor.
                 <script src='js/sql.js'></script>
             </head>
 
-            <body onload="amagaTot();"
-                style="background-image: url('img/Desert.png');">
+            <body onload="amagaTot();" style="background-image: url('img/Desert.png'); background-repeat: no-repeat;">
                 <h1 id="Versio">Versio Joc del Penjat</h1>
-                
-                 <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="de"></a>
-        <img src="img/de.png" alt="tra_de" title="en Aleman"></a>  
-                 <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="it"></a>
-        <img src="img/it.png" alt="tra_it" title="en Italiano"></a>  
-       <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="es"></a>
-        <img src="img/es.png" alt="tra_es" title="en Español"></a>  
-          <select name="Idiomes" id="Idiomes" onchange="CanviarIdioma(this.value)" title="Select">
-                <option value="ca">ca</option>
-                <option value="es">es</option>
-                <option value="en">en</option>
-                <option value="fr">fr</option>
-                <option value="de">de</option>
-                <option value="it">it</option>
+               
+                <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="de">
+                    <img src="img/de.png" alt="tra_de" title="en Aleman"></a>  
+                <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="it">
+                    <img src="img/it.png" alt="tra_it" title="en Italiano"></a>  
+                <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="es">
+                    <img src="img/es.png" alt="tra_es" title="en Español"></a>  
+                <a href="https://penjat.github.netfly.app/imatgesons.html"id="ca">
+                    <img src="img/ca.png" alt="tra_ca" title="en Català"></a>
+                <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="gb">
+                    <img src="img/gb.png" alt="tra_gb" title="en English"></a>  
+                <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="fr">
+                    <img src="img/fr.png" alt="tra_fr" title="en Frances"></a>  
+               
+                <select name="Idiomes" id="Idiomes" onchange="CanviarIdioma(this.value)" title="Select">
+                    <option value="ca">ca</option>
+                    <option value="es">es</option>
+                    <option value="en">en</option>
+                    <option value="fr">fr</option>
+                    <option value="de">de</option>
+                    <option value="it">it</option>
                 </select>
-                 <a href="https://penjat.github.netfly.app/imatgesons.html"id="ca">
-        <img src="img/ca.png" alt="tra_ca" title="en Català"></a>
-         <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="gb"></a>
-        <img src="img/gb.png" alt="tra_gb" title="en English"></a>  
-             <a href="https://penjat--github-netfly-app.translate.goog/imatgesons.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es"id="fr"></a>
-        <img src="img/fr.png" alt="tra_fr" title="en Frances"></a>  
+                <br><br>
+               
                 <input type="text" placeholder="Escriu una lletra en minúscula" id="valor" maxlength="1">
                 <button  id="comprovar" onclick="comprovar();" id="boto">Comprovar</button>
 
@@ -54,7 +55,6 @@ and open the template in the editor.
                 <h2 id="counter">0</h2>
                 <p>Design by Manuel Cerdo Rossello</p>
 
-
         <img src="img/ahorcado_6.png" id="ahorcado_6" style="width:280px;heitht:270px;"title="Et queden 6 vides!">
         <img src="img/ahorcado_5.png" id="ahorcado_5" style="width:280px;heitht:270px;"title="Et queden 5 vides!">
         <img src="img/ahorcado_4.png" id="ahorcado_4" style="width:280px;heitht:270px;"title="Et queden 4 vides!">
@@ -62,8 +62,6 @@ and open the template in the editor.
         <img src="img/ahorcado_2.png" id="ahorcado_2" style="width:280px;heitht:270px;"title="Et queden 2 vides!">
         <img src="img/ahorcado_1.png" id="ahorcado_1" style="width:280px;heitht:270px;"title="Et queden 1 vides!">
         <img src="img/ahorcado_0.png" id="ahorcado_0" style="width:280px;heitht:270px;"title="Has mort!">
-
-
 
         <audio id="bell_toll">
             <source src="aud/bell_toll.mp3" type="audio/mpeg">
@@ -78,9 +76,6 @@ and open the template in the editor.
             <source src="aud/cat-fight.mp3" type="audio/mpeg">
         </audio>
         <audio id="cheer">
-            <audio controls>
-                <source src="aud/aud/cheer.mp3" type="audio/mpeg">
-            </audio>
             <source src="aud/cheer.mp3" type="audio/mpeg">
         </audio>
         <audio id="clock_ticking">
@@ -93,8 +88,8 @@ and open the template in the editor.
             <source src="aud/mystery.mp3" type="audio/mpeg">
         </audio>
 
-            </body>
+    </body>
+</html>
 
-        </html>
 
 
